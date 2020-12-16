@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+import 'package:chatapp/main.dart';
 class Record{
   final String name;
   final String avatarUrl;
@@ -7,5 +9,5 @@ class Record{
       name=map['name'],
   avatarUrl = map['avatarUrl'],
   photoUrl = map['photoUrl'],
-text=map['text'],
+   text=map['text'];
 }

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:chatapp/widgets/chat_list.dart';
+import 'package:chatapp/widgets/chat_message.dart';
+import 'package:chatapp/widgets/text_composer.dart';
+import 'package:chatapp/models/record.dart';
 
 void main() {
   runApp(MyApp());

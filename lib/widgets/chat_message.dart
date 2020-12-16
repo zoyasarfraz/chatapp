@@ -7,7 +7,7 @@ class ChatMessage extends StatelessWidget{
 
   @override
 Widget build(BuildContext  context){
-    final record =Record.fromMap(snapshot)
+    final record =Record.fromMap(snapshot);
     return Container(
       child: Row(
         children: <Widget>[
