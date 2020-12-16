@@ -3,6 +3,7 @@ import 'package:chatapp/widgets/chat_list.dart';
 import 'package:chatapp/widgets/chat_message.dart';
 import 'package:chatapp/widgets/text_composer.dart';
 import 'package:chatapp/models/record.dart';
+import 'package:chatapp/widgets/chat_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ChatScreen(title: 'Flutter Demo Home Page'),
+      home: ChatScreen(),
     );
   }
 }

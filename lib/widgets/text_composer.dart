@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 
 class TextComposer extends StatefulWidget {
+  final Function(String) sendCallback;
+  const TextComposer({Key key, this.sendCallback}) : super(key :key);
   @override
   _TextComposerState createState() => _TextComposerState();
 }
@@ -15,12 +17,22 @@ void _handleSubmitted(String text) {
   _textEditingController.clear();
   setState(() {
     _isComposing=false;
+    widget.sendCallback(text);
 
   });
 }
  @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: Theme.of(context).cardColor,
+      ),
+      child:IconTheme(
+        data:IconThemeData( color: Theme.of(context).accentColor),
+
+        child:Container(
+
+
       child: Row(
 
         children:   <Widget>[
@@ -43,10 +55,10 @@ IconButton
    (
    icon:Icon(Icons.send) ,
   onPressed: _isComposing ? () => _handleSubmitted(_textEditingController.text): null,
-   )
+   ),
         ],
       ),
-    );
+    )),);
   }
 }
 
