@@ -11,11 +11,11 @@ Widget build(BuildContext  context){
     return Container(
       child: Row(
         children: <Widget>[
-          CircleAvatar(
+          CircleAvatar(child: Text(record.name[0]),
 
           ),
 
-
+          Text(record.text),
         ],
       )
     );
